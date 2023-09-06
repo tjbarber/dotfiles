@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-plugins = {
+local plugins = {
 	"nvim-telescope/telescope.nvim",
 	"nvim-lua/plenary.nvim",
   "navarasu/onedark.nvim",
@@ -59,7 +59,8 @@ plugins = {
 	'linrongbin16/lsp-progress.nvim',
 	{ 'akinsho/toggleterm.nvim', version = "*", config = true },
   {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
-  'tpope/vim-endwise'
+  'tpope/vim-endwise',
+  { 'numToStr/Comment.nvim', lazy = false },
 }
 
 require("lazy").setup(plugins)
