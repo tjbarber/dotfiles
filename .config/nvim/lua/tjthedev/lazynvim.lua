@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 plugins = {
 	"nvim-telescope/telescope.nvim",
 	"nvim-lua/plenary.nvim",
-	"rose-pine/neovim",
+  "navarasu/onedark.nvim",
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	"nvim-treesitter/playground",
 	"nvim-tree/nvim-tree.lua",
