@@ -9,7 +9,7 @@ end)
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 require('lspconfig').solargraph.setup({
-	cmd = { '/home/tjbarber/.asdf/shims/solargraph', 'stdio' },
+	cmd = { os.getenv('HOME') .. '/.asdf/shims/solargraph', 'stdio' },
 	settings = {
 		solargraph = {
 			autoformat = true,
