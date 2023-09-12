@@ -61,6 +61,7 @@ local plugins = {
   {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
   'tpope/vim-endwise',
   { 'numToStr/Comment.nvim', lazy = false },
+  { 'pocco81/auto-save.nvim', lazy = false },
 }
 
 require("lazy").setup(plugins)
