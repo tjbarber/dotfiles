@@ -1,5 +1,4 @@
 configuration {
-    theme: "~/.config/rofi/nord.rasi";
 	  modi: "window,run,ssh";
     font: "Cozette 10";
 /*	location: 0;*/
