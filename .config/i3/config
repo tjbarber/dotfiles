@@ -185,6 +185,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id picom -f --fade-delta=5 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
+exec --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
 exec --no-startup-id nitrogen --restore
 gaps inner 10
 gaps outer 10
