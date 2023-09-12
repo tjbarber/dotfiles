@@ -198,5 +198,7 @@ bindsym XF86AudioPause exec --no-startup-id playerctl pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
+bindsym $mod+Shift+p exec maim -s -u | xclip -selection clipboard -t image/png -i
+
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
