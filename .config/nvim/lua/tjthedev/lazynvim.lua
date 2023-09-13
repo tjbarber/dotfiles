@@ -62,6 +62,12 @@ local plugins = {
   'tpope/vim-endwise',
   { 'numToStr/Comment.nvim', lazy = false },
   { 'pocco81/auto-save.nvim', lazy = false },
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
+  'windwp/nvim-ts-autotag',
 }
 
 require("lazy").setup(plugins)
