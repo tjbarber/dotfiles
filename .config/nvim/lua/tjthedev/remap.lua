@@ -7,3 +7,13 @@ vim.keymap.set('n', '<leader>cp', function ()
   vim.fn.setreg("@", path)
   vim.notify('Copied "' .. path .. '" to the clipboard!')
 end)
+
+vim.keymap.set('n', '<leader>cP', function ()
+  local path = vim.fn.expand("%:.")
+  vim.fn.setreg("@", path)
+  vim.notify('Copied "' .. path .. '" to the system clipboard!')
+end)
+
+vim.keymap.set('n', '<leader>[', '<Cmd>BufferPrevious<CR>');
+vim.keymap.set('n', '<leader>]', '<Cmd>BufferNext<CR>');
+vim.keymap.set('n', '<leader>w', '<Cmd>BufferClose<CR>');
