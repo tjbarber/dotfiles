@@ -18,6 +18,9 @@ require("nvim-tree").setup({
   renderer = {
     group_empty = true,
   },
+  filters = {
+    git_ignored = false,
+  }
 })
 
 local api = require "nvim-tree.api"
