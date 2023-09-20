@@ -14,6 +14,6 @@ vim.keymap.set('n', '<leader>cP', function ()
   vim.notify('Copied "' .. path .. '" to the system clipboard!')
 end)
 
-vim.keymap.set('n', '<leader>[', '<Cmd>BufferPrevious<CR>');
-vim.keymap.set('n', '<leader>]', '<Cmd>BufferNext<CR>');
+vim.keymap.set('n', '<leader>h', '<Cmd>BufferPrevious<CR>');
+vim.keymap.set('n', '<leader>l', '<Cmd>BufferNext<CR>');
 vim.keymap.set('n', '<leader>w', '<Cmd>BufferClose<CR>');
