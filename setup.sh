@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# turns the platform into 'linux' or 'darwin'
+platform=$(uname | tr '[:upper:]' '[:lower:]')
+
 rm -f -- ~/.alacritty.yml
 rm -f -- ~/.fonts
 rm -rf -- ~/.config/nvim
@@ -9,11 +12,11 @@ rm -rf -- ~/.config/rofi
 rm -rf -- ~/.config/gtk-3.0
 rm -rf -- ~/.zshrc
 
-ln -s "$(pwd)/.alacritty.yml" ~/.alacritty.yml
+ln -s "$(pwd)/.alacritty.$platform.yml" ~/.alacritty.yml
 ln -s "$(pwd)/.config/nvim" ~/.config/nvim
 ln -s "$(pwd)/.zshrc" ~/.zshrc
 
-if [ $(uname) = "Linux" ]; then
+if [ platform = "linux" ]; then
   ln -s "$(pwd)/.fonts" ~/.fonts
   ln -s "$(pwd)/.config/i3" ~/.config/i3
   ln -s "$(pwd)/.config/polybar" ~/.config/polybar
