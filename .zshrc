@@ -100,7 +100,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 . "$HOME/.asdf/asdf.sh"
-setxkbmap -option "ctrl:nocaps"
+
+if [ $(uname) = "Linux" ]; then
+  setxkbmap -option "ctrl:nocaps"
+fi
+
+if [ $(uname) = "Darwin" ]; then
+  export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+fi
+
 alias gs="git status"
 alias gp="git push"
 alias gl="git log"
