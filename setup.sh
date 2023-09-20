@@ -16,7 +16,7 @@ ln -s "$(pwd)/.alacritty.$platform.yml" ~/.alacritty.yml
 ln -s "$(pwd)/.config/nvim" ~/.config/nvim
 ln -s "$(pwd)/.zshrc" ~/.zshrc
 
-if [ platform = "linux" ]; then
+if [ platform == "linux" ]; then
   ln -s "$(pwd)/.fonts" ~/.fonts
   ln -s "$(pwd)/.config/i3" ~/.config/i3
   ln -s "$(pwd)/.config/polybar" ~/.config/polybar
