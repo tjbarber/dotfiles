@@ -99,9 +99,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-. "$HOME/.asdf/asdf.sh"
+if [ -d "$HOME/.asdf" ]; then
+  . "$HOME/.asdf/asdf.sh"
+fi
 
-if [ $(uname) = "Linux" ]; then
+if [ $(uname) = "Linux" ] && [ $XDG_SESSION_TYPE != 'wayland' ]; then
   setxkbmap -option "ctrl:nocaps"
 fi
 
