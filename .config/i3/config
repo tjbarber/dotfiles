@@ -187,6 +187,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
 exec --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | sed 's/.*"lat": \(-\?[0-9.]*\).*"lng": \(-\?[0-9.]*\).*/\1:\2/')
 gaps inner 10
 gaps outer 10
 gaps bottom 40
