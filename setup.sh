@@ -12,10 +12,13 @@ rm -rf -- ~/.config/polybar
 rm -rf -- ~/.config/rofi
 rm -rf -- ~/.config/gtk-3.0
 rm -rf -- ~/.zshrc
+rm -rf -- ~/.tmux.conf
 
 ln -s "$(pwd)/.alacritty.$platform.yml" ~/.alacritty.yml
 ln -s "$(pwd)/.config/nvim" ~/.config/nvim
 ln -s "$(pwd)/.zshrc" ~/.zshrc
+ln -s "$(pwd)/.tmux.conf" ~/.tmux.conf
+ln -s "$(pwd)/work" ~/work
 
 if [ $platform == "linux" ]; then
   if [ $XDG_SESSION_TYPE == "wayland" ]; then

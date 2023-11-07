@@ -1,0 +1,14 @@
+tmux new-session -s work -d
+tmux send-keys -t work 'cd ~/Projects/ui/rails-server' C-m
+tmux send-keys -t work 'nvim .' C-m
+
+tmux new-window -t work
+tmux send-keys -t work 'cd ~/Projects/ui/rails-server' C-m
+tmux send-keys -t work 'rails s' C-m
+tmux split-window -h -t work
+tmux send-keys -t work:2.2 'cd ~/Projects/ui/rails-server' C-m
+tmux send-keys -t work:2.2 './bin/shaka --watch' C-m
+
+tmux select-window -t work:1
+tmux attach -t work
+
