@@ -103,6 +103,9 @@ if [ -d "$HOME/.asdf" ]; then
   . "$HOME/.asdf/asdf.sh"
 fi
 
+export VISUAL=hx
+export EDITOR="$VISUAL"
+
 if [ $(uname) = "Linux" ] && [ $XDG_SESSION_TYPE != 'wayland' ]; then
   setxkbmap -option "ctrl:nocaps"
 fi

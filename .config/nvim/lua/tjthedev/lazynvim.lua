@@ -12,13 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	"nvim-telescope/telescope.nvim",
-	"nvim-lua/plenary.nvim",
-  "navarasu/onedark.nvim",
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	"nvim-tree/nvim-tree.lua",
-	"nvim-tree/nvim-web-devicons",
-	"tpope/vim-fugitive",
+	'nvim-telescope/telescope.nvim',
+	'nvim-lua/plenary.nvim',
+  'navarasu/onedark.nvim',
+	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+	'nvim-tree/nvim-tree.lua',
+	'nvim-tree/nvim-web-devicons',
+	'tpope/vim-fugitive',
 	{
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
@@ -50,6 +50,7 @@ local plugins = {
     opts = {} -- this is equalent to setup({}) function
   },
   'windwp/nvim-ts-autotag',
+  'jwalton512/vim-blade'
 }
 
 require("lazy").setup(plugins)
