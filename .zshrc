@@ -103,6 +103,10 @@ if [ -d "$HOME/.asdf" ]; then
   . "$HOME/.asdf/asdf.sh"
 fi
 
+if [ -d "$HOME/.cargo/bin" ]; then
+  path+=("$HOME/.cargo/bin")
+fi
+
 export VISUAL=hx
 export EDITOR="$VISUAL"
 

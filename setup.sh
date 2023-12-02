@@ -5,17 +5,20 @@ platform=$(uname | tr '[:upper:]' '[:lower:]')
 
 rm -f -- ~/.alacritty.yml
 rm -f -- ~/.fonts
+rm -f -- ~/work
 rm -rf -- ~/.config/nvim
 rm -rf -- ~/.config/i3
 rm -rf -- ~/.config/sway
 rm -rf -- ~/.config/polybar
 rm -rf -- ~/.config/rofi
 rm -rf -- ~/.config/gtk-3.0
+rm -rf -- ~/.config/helix
 rm -rf -- ~/.zshrc
 rm -rf -- ~/.tmux.conf
 
 ln -s "$(pwd)/.alacritty.$platform.yml" ~/.alacritty.yml
 ln -s "$(pwd)/.config/nvim" ~/.config/nvim
+ln -s "$(pwd)/.config/helix" ~/.config/helix
 ln -s "$(pwd)/.zshrc" ~/.zshrc
 ln -s "$(pwd)/.tmux.conf" ~/.tmux.conf
 ln -s "$(pwd)/work" ~/work
