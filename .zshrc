@@ -111,7 +111,7 @@ if [ -d "$HOME/.local/bin" ]; then
   path+=("$HOME/.local/bin")
 fi
 
-export VISUAL=hx
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 if [ $(uname) = "Linux" ] && [ $XDG_SESSION_TYPE != 'wayland' ]; then
