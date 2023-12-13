@@ -22,10 +22,10 @@ vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
 
-vim.o.foldcolumn = '1' -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
+vim.opt.foldcolumn = '1' -- '0' is not bad
+vim.opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
 
 vim.opt.wildmode = 'longest:full,full' -- better tabbing completion in command mode
 vim.opt.title = true

@@ -107,6 +107,10 @@ if [ -d "$HOME/.cargo/bin" ]; then
   path+=("$HOME/.cargo/bin")
 fi
 
+if [ -d "$HOME/.local/bin" ]; then
+  path+=("$HOME/.local/bin")
+fi
+
 export VISUAL=hx
 export EDITOR="$VISUAL"
 
