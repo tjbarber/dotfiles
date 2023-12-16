@@ -23,7 +23,6 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-exec ~/.azotebg
 
 ### Output configuration
 
@@ -203,10 +202,12 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position bottom
+    gaps 0 20 10
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+
+    status_command while ~/.config/sway/status.sh; do sleep 1; done
 
     colors {
         statusline #ffffff
