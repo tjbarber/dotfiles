@@ -11,7 +11,6 @@ end)
 vim.keymap.set('n', '<leader>h', '<Cmd>bprevious<CR>')
 vim.keymap.set('n', '<leader>l', '<Cmd>bnext<CR>')
 vim.keymap.set('n', '<leader>w', '<Cmd>bd<CR>')
-vim.keymap.set('n', '<leader>b', '<Cmd>Telescope buffers<CR>')
 
 vim.keymap.set('n', ';;', '<Esc>A;<Esc>')
 vim.keymap.set('n', ',,', '<Esc>A,<Esc>')
