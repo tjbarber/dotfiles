@@ -4,7 +4,7 @@ vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
 
 vim.keymap.set('n', '<leader>cp', function ()
   local path = vim.fn.expand("%:.")
-  vim.fn.setreg("@", path)
+  vim.fn.setreg("+", path)
   vim.notify('Copied "' .. path .. '" to the system clipboard!')
 end)
 
