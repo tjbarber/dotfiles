@@ -8,8 +8,6 @@ vim.keymap.set('n', '<leader>cp', function ()
   vim.notify('Copied "' .. path .. '" to the system clipboard!')
 end)
 
-vim.keymap.set('n', '<leader>h', '<Cmd>bprevious<CR>')
-vim.keymap.set('n', '<leader>l', '<Cmd>bnext<CR>')
 vim.keymap.set('n', '<leader>w', '<Cmd>bd<CR>')
 
 vim.keymap.set('n', ';;', '<Esc>A;<Esc>')

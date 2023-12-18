@@ -51,7 +51,12 @@ local plugins = {
     opts = {} -- this is equalent to setup({}) function
   },
   'windwp/nvim-ts-autotag',
-  'jwalton512/vim-blade'
+  'jwalton512/vim-blade',
+  {
+      "ThePrimeagen/harpoon",
+      branch = "harpoon2",
+      requires = { {"nvim-lua/plenary.nvim"} }
+  }
 }
 
 require("lazy").setup(plugins)
