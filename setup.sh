@@ -12,13 +12,11 @@ rm -rf -- ~/.config/sway
 rm -rf -- ~/.config/polybar
 rm -rf -- ~/.config/rofi
 rm -rf -- ~/.config/gtk-3.0
-rm -rf -- ~/.config/kitty
 rm -rf -- ~/.zshrc
 rm -rf -- ~/.tmux.conf
 rm -rf -- ~/Pictures/wallpapers
 
 ln -s "$(pwd)/.alacritty.$platform.yml" ~/.alacritty.yml
-ln -s "$(pwd)/kitty" ~/.config/kitty
 ln -s "$(pwd)/nvim" ~/.config/nvim
 ln -s "$(pwd)/.zshrc" ~/.zshrc
 ln -s "$(pwd)/.tmux.conf" ~/.tmux.conf

@@ -16,8 +16,11 @@ local plugins = {
   'nvim-lua/plenary.nvim',
   'navarasu/onedark.nvim',
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-  'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
+  {
+    'stevearc/oil.nvim',
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
   'tpope/vim-fugitive',
   'tpope/vim-sleuth',
   {
@@ -44,7 +47,7 @@ local plugins = {
   { 'akinsho/toggleterm.nvim', version = "*", config = true },
   {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
   { 'numToStr/Comment.nvim', lazy = false },
-  { 'pocco81/auto-save.nvim', lazy = false },
+  -- { 'pocco81/auto-save.nvim', lazy = false },
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
