@@ -13,8 +13,19 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   'nvim-telescope/telescope.nvim',
+  'nvim-telescope/telescope-ui-select.nvim',
   'nvim-lua/plenary.nvim',
-  'navarasu/onedark.nvim',
+  {
+    'jesseleite/nvim-noirbuddy',
+    dependencies = {
+      { 'tjdevries/colorbuddy.nvim', branch = 'dev' }
+    },
+    lazy = false,
+    priority = 1000,
+    opts = {
+      -- All of your `setup(opts)` will go here
+    },
+  },
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   'nvim-tree/nvim-web-devicons',
   {
@@ -51,9 +62,8 @@ local plugins = {
     },
   },
   { 'akinsho/toggleterm.nvim', version = "*", config = true },
-  {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
+  { 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
   { 'numToStr/Comment.nvim', lazy = false },
-  -- { 'pocco81/auto-save.nvim', lazy = false },
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
@@ -61,6 +71,7 @@ local plugins = {
   },
   'windwp/nvim-ts-autotag',
   'jwalton512/vim-blade',
+  'pocco81/auto-save.nvim',
   {
       "ThePrimeagen/harpoon",
       branch = "harpoon2",
