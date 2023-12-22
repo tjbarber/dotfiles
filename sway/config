@@ -228,4 +228,6 @@ for_window [class=".*"] border pixel 0
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
+bindsym $mod+Shift+p exec slurp | grim -g - - | wl-copy
+
 include /etc/sway/config.d/*

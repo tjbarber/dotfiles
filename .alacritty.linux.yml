@@ -15,4 +15,12 @@ font:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
 
-  size: 10
+  size: 14
+
+window:
+  padding:
+    x: 20
+    y: 20
+
+import:
+ - ~/Projects/alacritty-noirbuddy/noirbuddy-miami-nights.yml
