@@ -18,7 +18,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -27,9 +27,9 @@ exec --no-startup-id nm-applet
 ### Output configuration
 
 output * adaptive_sync on
-output * background ~/Pictures/wallpapers/montana/colter-olmstead-Lpj6e4wyg_0-unsplash.jpg fill
-output "Samsung Electric Company SAMSUNG 0x00000F00" resolution 1920x1080@60Hz position 0,0 
-output "Acer Technologies Acer XB272 #ASM4zqQhZAfd" resolution 1920x1080@240Hz position 1920,0 
+output * background ~/Pictures/wallpapers/iceland/jakob-stenqvist-IvjyerTIgdg-unsplash.jpg fill
+output "Samsung Electric Company SAMSUNG 0x00000F00" resolution 1920x1080@60Hz position 0,0
+output "Acer Technologies Acer XB272 #ASM4zqQhZAfd" resolution 1920x1080@240Hz position 1920,0
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
