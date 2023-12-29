@@ -15,9 +15,12 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
+# Make sure to add the COPR repo and install wmenu
+# sudo dnf copr enable alebastr/sway-extras && dnf install wmenu
 set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
