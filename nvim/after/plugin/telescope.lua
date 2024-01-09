@@ -5,8 +5,8 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fs', function()
 	builtin.grep_string({search = vim.fn.input("Grep > ") });
 end)
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>b', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>b', '<Cmd>Telescope buffers<CR>')
+vim.keymap.set('n', '<leader>s', builtin.git_status, {})
 
 require("telescope").load_extension("ui-select")
