@@ -3,7 +3,7 @@
 # turns the platform into 'linux' or 'darwin'
 platform=$(uname | tr '[:upper:]' '[:lower:]')
 
-rm -f -- ~/.alacritty.yml
+rm -f -- ~/.alacritty.toml
 rm -f -- ~/.fonts
 rm -f -- ~/work
 rm -rf -- ~/.config/nvim
@@ -13,7 +13,7 @@ rm -rf -- ~/.zshrc
 rm -rf -- ~/.tmux.conf
 rm -rf -- ~/Pictures/wallpapers
 
-ln -s "$(pwd)/.alacritty.$platform.yml" ~/.alacritty.yml
+ln -s "$(pwd)/.alacritty.toml" ~/.alacritty.toml
 ln -s "$(pwd)/nvim" ~/.config/nvim
 ln -s "$(pwd)/.zshrc" ~/.zshrc
 ln -s "$(pwd)/.tmux.conf" ~/.tmux.conf
