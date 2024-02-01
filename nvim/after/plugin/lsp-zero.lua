@@ -23,4 +23,8 @@ require('lspconfig').solargraph.setup({
 	}
 })
 
+require('lspconfig').sourcekit.setup {
+	cmd = { '/usr/bin/sourcekit-lsp' }
+}
+
 lsp.setup()
