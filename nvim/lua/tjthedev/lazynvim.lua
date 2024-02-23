@@ -32,7 +32,6 @@ local plugins = {
     'stevearc/oil.nvim',
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  'tpope/vim-fugitive',
   'tpope/vim-sleuth',
   {
     'VonHeikemen/lsp-zero.nvim',
@@ -70,8 +69,10 @@ local plugins = {
     opts = {} -- this is equalent to setup({}) function
   },
   'windwp/nvim-ts-autotag',
-  'jwalton512/vim-blade',
-  'okuuva/auto-save.nvim',
+  {
+    'okuuva/auto-save.nvim',
+    opts = {}
+  },
   {
       "ThePrimeagen/harpoon",
       branch = "harpoon2",
