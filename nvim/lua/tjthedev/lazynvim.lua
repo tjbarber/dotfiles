@@ -71,7 +71,7 @@ local plugins = {
   },
   'windwp/nvim-ts-autotag',
   'jwalton512/vim-blade',
-  'pocco81/auto-save.nvim',
+  'okuuva/auto-save.nvim',
   {
       "ThePrimeagen/harpoon",
       branch = "harpoon2",

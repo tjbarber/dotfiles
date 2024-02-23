@@ -22,3 +22,8 @@ style = "Regular"
 [window.padding]
 x = 20
 y = 20
+
+[keyboard]
+bindings = [
+  { key = "F", mods = "Command | Shift", action = "ToggleFullscreen" }
+]

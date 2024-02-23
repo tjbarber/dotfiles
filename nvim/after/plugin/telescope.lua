@@ -8,5 +8,6 @@ end)
 vim.keymap.set('n', '<leader>b', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>s', builtin.git_status, {})
+vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find, {})
 
 require("telescope").load_extension("ui-select")
