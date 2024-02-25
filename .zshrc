@@ -133,4 +133,6 @@ alias debug="gdb --batch --ex run --ex bt --ex q --args"
 if lspci -nn | grep -q "RTX 3070"; then
   export WLR_NO_HARDWARE_CURSORS=1
   export WLR_RENDERER=vulkan
+
+  alias sway="sway --unsupported-gpu"
 fi
