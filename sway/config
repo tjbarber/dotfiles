@@ -35,6 +35,8 @@ output * adaptive_sync on
 output * bg ~/Pictures/wallpapers/montana/dave-herring-C_A13XI4PY8-unsplash.jpg fill
 output "Samsung Electric Company SAMSUNG 0x00000F00" resolution 1920x1080@60Hz position 0,0
 output "Acer Technologies Acer XB272 #ASM4zqQhZAfd" resolution 1920x1080@240Hz position 1920,0
+
+focus output "Acer Technologies Acer XB272 #ASM4zqQhZAfd"
 #
 # Example configuration:
 #
