@@ -130,6 +130,7 @@ alias ga="git add"
 alias gd="git diff"
 alias debug="gdb --batch --ex run --ex bt --ex q --args"
 alias wip="ga . && gc 'wip'"
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
 if lspci -nn | grep -q "RTX 3070"; then
   export WLR_NO_HARDWARE_CURSORS=1

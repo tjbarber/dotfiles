@@ -77,7 +77,8 @@ local plugins = {
       "ThePrimeagen/harpoon",
       branch = "harpoon2",
       requires = { {"nvim-lua/plenary.nvim"} }
-  }
+  },
+  { "mistricky/codesnap.nvim", build = "make", version = "^1" },
 }
 
 require("lazy").setup(plugins)
