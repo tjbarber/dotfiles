@@ -111,6 +111,10 @@ if [ -d "$HOME/.local/bin" ]; then
   path+=("$HOME/.local/bin")
 fi
 
+if [ -d "$HOME/.config/composer/vendor/bin" ]; then
+  path+=("$HOME/.config/composer/vendor/bin")
+fi
+
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
