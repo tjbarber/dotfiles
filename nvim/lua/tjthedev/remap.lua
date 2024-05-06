@@ -21,3 +21,4 @@ vim.keymap.set('n', '<leader>f', function ()
 end)
 
 vim.keymap.set('n', '<C-Space>', '<Cmd>terminal<CR>a')
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
