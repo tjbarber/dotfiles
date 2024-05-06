@@ -19,3 +19,5 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set('n', '<leader>f', function ()
   vim.lsp.buf.code_action()
 end)
+
+vim.keymap.set('n', '<C-Space>', '<Cmd>terminal<CR>a')

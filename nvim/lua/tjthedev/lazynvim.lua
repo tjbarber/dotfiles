@@ -60,7 +60,6 @@ local plugins = {
       'linrongbin16/lsp-progress.nvim',
     },
   },
-  { 'akinsho/toggleterm.nvim', version = "*", config = true },
   { 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
   { 'numToStr/Comment.nvim', lazy = false },
   {
