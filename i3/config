@@ -196,8 +196,8 @@ bar {
     statusline #FFFFFF
     separator  #666666
 
-    focused_workspace  #83CAFA #51A2DA #FFFFFF
-    active_workspace   #3C6EB4 #294172 #FFFFFF
+    focused_workspace  #3C6EB4 #294172 #FFFFFF 
+    active_workspace   #83CAFA #51A2DA #FFFFFF
     inactive_workspace #323232 #323232 #5c5c5c
     urgent_workspace   #EC69A0 #DB3279 #FFFFFF
     binding_mode       #b691d3 #A07CBC #FFFFFF
@@ -208,7 +208,8 @@ bar {
 
 exec --no-startup-id dunst
 # exec --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/lights/patrick-tomasso-1NTFSnV-KLs-unsplash.jpg
+# exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/lights/patrick-tomasso-1NTFSnV-KLs-unsplash.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/pixel_art/1224149.png
 
 gaps inner 10
 gaps outer 10
