@@ -33,6 +33,8 @@ local plugins = {
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
   'tpope/vim-sleuth',
+  'tpope/vim-fugitive',
+  'tpope/vim-rhubarb',
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',

@@ -8,6 +8,7 @@ rm -f -- ~/.fonts
 rm -f -- ~/work
 rm -rf -- ~/.config/nvim
 rm -rf -- ~/.config/sway
+rm -rf -- ~/.config/i3
 rm -rf -- ~/.config/gtk-3.0
 rm -rf -- ~/.zshrc
 rm -rf -- ~/.tmux.conf
@@ -21,6 +22,7 @@ ln -s "$(pwd)/work" ~/work
 ln -s "$(pwd)/wallpapers" ~/Pictures/wallpapers
 
 if [ $platform == "linux" ]; then
+  ln -s "$(pwd)/i3" ~/.config/i3
   ln -s "$(pwd)/sway" ~/.config/sway
   ln -s "$(pwd)/fonts" ~/.fonts
   ln -s "$(pwd)/gtk-3.0" ~/.config/gtk-3.0
