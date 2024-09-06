@@ -58,6 +58,7 @@ require'nvim-treesitter.configs'.setup {
 
 vim.filetype.add({
   pattern = {
+    ['.*%.leaf'] = 'html',
     ['.*%.blade%.php'] = 'php',
   },
 })
