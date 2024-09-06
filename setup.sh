@@ -30,3 +30,7 @@ if [ $platform == "linux" ]; then
   gsettings set org.gnome.desktop.interface color-scheme prefer-dark
   fc-cache
 fi
+
+if [ $platform == "darwin" ]; then
+  defaults write org.alacritty AppleFontSmoothing -int 0
+fi
