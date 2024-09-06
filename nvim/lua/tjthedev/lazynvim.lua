@@ -96,6 +96,9 @@ local plugins = {
     },
     event = { "VeryLazy" },
     config = true,
+  },
+  {
+    'stevearc/conform.nvim',
   }
 }
 
