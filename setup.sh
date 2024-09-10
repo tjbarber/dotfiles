@@ -18,6 +18,7 @@ ln -s "$(pwd)/.alacritty.toml" ~/.alacritty.toml
 ln -s "$(pwd)/nvim" ~/.config/nvim
 ln -s "$(pwd)/.zshrc" ~/.zshrc
 ln -s "$(pwd)/.tmux.conf" ~/.tmux.conf
+ln -s "$(pwd)/.ideavimrc" ~/.ideavimrc
 ln -s "$(pwd)/work" ~/work
 ln -s "$(pwd)/wallpapers" ~/Pictures/wallpapers
 
