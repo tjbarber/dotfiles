@@ -1,7 +1,7 @@
-import = ["/home/tjbarber/Projects/alacritty-noirbuddy/noirbuddy-miami-nights.toml"]
+import = ["/Users/tjbarber/Projects/alacritty-noirbuddy/noirbuddy-miami-nights.toml"]
 
 [font]
-size = 14
+size = 20
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"

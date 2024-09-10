@@ -124,10 +124,19 @@ export EDITOR="$VISUAL"
 
 if [ $(uname) = "Linux" ] && [ $XDG_SESSION_TYPE != 'wayland' ]; then
   setxkbmap -option "ctrl:nocaps"
+
+  if lspci -nn | grep -q "RTX 3070"; then
+    export WLR_NO_HARDWARE_CURSORS=1
+    export WLR_RENDERER=vulkan
+
+    alias sway="sway --unsupported-gpu"
+  fi
 fi
 
 if [ $(uname) = "Darwin" ]; then
   export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+  export LC_ALL=en_US.UTF-8
+  export LANG=en_US.UTF-8
 fi
 
 alias gs="git status"
@@ -139,10 +148,4 @@ alias gd="git diff"
 alias debug="gdb --batch --ex run --ex bt --ex q --args"
 alias wip="ga . && gc 'wip'"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
-
-if lspci -nn | grep -q "RTX 3070"; then
-  export WLR_NO_HARDWARE_CURSORS=1
-  export WLR_RENDERER=vulkan
-
-  alias sway="sway --unsupported-gpu"
-fi
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
