@@ -148,4 +148,5 @@ alias gd="git diff"
 alias debug="gdb --batch --ex run --ex bt --ex q --args"
 alias wip="ga . && gc 'wip'"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+alias poweroff='sudo systemctl poweroff'
+alias reboot='sudo systemctl reboot'

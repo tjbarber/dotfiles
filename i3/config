@@ -208,9 +208,8 @@ bar {
 
 exec --no-startup-id dunst
 # exec --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
-# exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/lights/patrick-tomasso-1NTFSnV-KLs-unsplash.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/andre-benz-e4xOmzd8vzg-unsplash.jpg
 # exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/pixel_art/1224149.png
-exec --no-startup-id ~/.fehbg
 bindsym $mod+Shift+p exec --no-startup-id maim -s -u | xclip -selection clipboard -t image/png -i
 gaps inner 10
 gaps outer 10
