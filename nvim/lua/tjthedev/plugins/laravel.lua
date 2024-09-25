@@ -13,6 +13,11 @@ return {
 		{ '<leader>la', ':Laravel artisan<cr>' },
 		{ '<leader>lr', ':Laravel routes<cr>' },
 		{ '<leader>lm', ':Laravel related<cr>' },
+		{ '<leader>lg', function()
+			local run = require 'laravel.run'
+			run('artisan', { 'ide-helper:generate' }, {})
+			run('artisan', { 'ide-helper:models' }, {})
+		end },
 	},
 	event = { 'VeryLazy' },
 	config = true,
