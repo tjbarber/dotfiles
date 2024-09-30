@@ -71,7 +71,10 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-vi-mode)
-ZVM_CURSOR_STYLE_ENABLED=false
+ZVM_INSERT_MODE_CURSOR=$icur'\e\e]12;#47BAC0\a'
+ZVM_NORMAL_MODE_CURSOR=$ncur'\e\e]12;#E4609B\a'
+ZVM_VI_HIGHLIGHT_FOREGROUND=#535353
+ZVM_VI_HIGHLIGHT_BACKGROUND=#323232
 
 source $ZSH/oh-my-zsh.sh
 
