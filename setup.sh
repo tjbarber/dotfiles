@@ -3,6 +3,9 @@
 # turns the platform into 'linux' or 'darwin'
 platform=$(uname | tr '[:upper:]' '[:lower:]')
 
+# This is where secret ENV vars go
+touch secrets.sh
+
 rm -f -- ~/.alacritty.toml
 rm -f -- ~/.fonts
 rm -f -- ~/work

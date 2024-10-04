@@ -2,3 +2,5 @@
 nvim/lazy-lock.json
 gtk-3.0/bookmarks
 **/.uuid
+databases.json
+secrets.sh

@@ -3,6 +3,9 @@ import = ["/home/tjbarber/Projects/alacritty-noirbuddy/noirbuddy-miami-nights.to
 [font]
 size = 14 
 
+# This is the font size we use for screencasting
+# size = 40
+
 [font.bold]
 family = "JetBrainsMono Nerd Font"
 style = "Bold"
