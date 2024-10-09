@@ -123,6 +123,10 @@ if [ -d "$HOME/go/bin" ]; then
   path+=("$HOME/go/bin")
 fi
 
+if [ -d "$HOME/.luarocks/bin" ]; then
+  path+=("$HOME/.luarocks/bin")
+fi
+
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
