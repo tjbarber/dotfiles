@@ -38,6 +38,15 @@ return {
 			enable = true,
 			additional_vim_regex_highlighting = true,
 		},
+		incremental_selection = {
+			enable = true,
+			keymaps = {
+				init_selection = "<M-o>",
+				scope_incremental = "<M-O>",
+				node_incremental = "<M-o>",
+				node_decremental = "<M-i>",
+			},
+		},
 	},
 	config = function(_, opts)
 		require('nvim-treesitter.configs').setup(opts)
