@@ -45,7 +45,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id ghostty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -208,7 +208,11 @@ bar {
 
 exec --no-startup-id dunst
 # exec --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/andre-benz-e4xOmzd8vzg-unsplash.jpg
+# nyc one that I like
+# exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/andre-benz-e4xOmzd8vzg-unsplash.jpg
+# christmas
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/colorado/samantha-sheppard-hYe_plc8mfo-unsplash.jpg
+
 # exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/pixel_art/1224149.png
 bindsym $mod+Shift+p exec --no-startup-id maim -s -u | xclip -selection clipboard -t image/png -i
 gaps inner 10

@@ -6,19 +6,19 @@ platform=$(uname | tr '[:upper:]' '[:lower:]')
 # This is where secret ENV vars go
 touch secrets.sh
 
-rm -f -- ~/.alacritty.toml
 rm -f -- ~/.fonts
 rm -f -- ~/work
 rm -rf -- ~/.config/nvim
 rm -rf -- ~/.config/sway
 rm -rf -- ~/.config/i3
 rm -rf -- ~/.config/gtk-3.0
+rm -rf -- ~/.config/ghostty
 rm -rf -- ~/.zshrc
 rm -rf -- ~/.tmux.conf
 rm -rf -- ~/Pictures/wallpapers
 
-ln -s "$(pwd)/.alacritty.toml" ~/.alacritty.toml
 ln -s "$(pwd)/nvim" ~/.config/nvim
+ln -s "$(pwd)/ghostty" ~/.config/ghostty
 ln -s "$(pwd)/.zshrc" ~/.zshrc
 ln -s "$(pwd)/.tmux.conf" ~/.tmux.conf
 ln -s "$(pwd)/.ideavimrc" ~/.ideavimrc

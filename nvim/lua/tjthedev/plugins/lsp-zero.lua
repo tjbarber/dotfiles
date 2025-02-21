@@ -15,6 +15,11 @@ return {
 		{ 'hrsh7th/cmp-nvim-lsp' },
 		{ 'hrsh7th/cmp-nvim-lua' },
 		{ 'L3MON4D3/LuaSnip' },
+		{
+			"MattiasMTS/cmp-dbee",
+			ft = "sql",
+			opts = {},
+		},
 	},
 	config = function()
 		local lsp = require('lsp-zero').preset({})
@@ -32,10 +37,14 @@ return {
 			cmd = { os.getenv('HOME') .. '/.asdf/shims/ruby-lsp', 'stdio' },
 		})
 
-		require('lspconfig').sourcekit.setup({
-			cmd = { '/usr/bin/sourcekit-lsp' }
-		})
-
 		lsp.setup()
+
+		-- cmp = require('cmp')
+		--
+		-- cmp.setup({
+		-- 	sources = {
+		-- 		{ "cmp-dbee" },
+		-- 	},
+		-- })
 	end
 }

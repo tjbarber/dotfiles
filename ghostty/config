@@ -1,0 +1,15 @@
+gtk-titlebar=false
+window-decoration=false
+font-family="JetBrainsMono NF"
+font-size=14
+window-padding-x=20
+window-padding-y=20
+shell-integration-features=no-cursor
+cursor-style=block
+cursor-style-blink=false
+theme=miami-nights
+confirm-close-surface=false
+
+keybind = super+shift+f=toggle_fullscreen
+keybind = super+shift+y=decrease_font_size:1
+keybind = super+shift+u=reset_font_size
