@@ -8,6 +8,7 @@ touch secrets.sh
 
 rm -f -- ~/.fonts
 rm -f -- ~/work
+rm -f -- ~/.ideavimrc
 rm -rf -- ~/.config/nvim
 rm -rf -- ~/.config/sway
 rm -rf -- ~/.config/i3
