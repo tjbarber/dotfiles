@@ -1,4 +1,5 @@
 gtk-titlebar=false
+gtk-custom-css = ./gtk.css
 window-decoration=false
 font-family="JetBrainsMono NF"
 font-size=14
