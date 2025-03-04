@@ -7,6 +7,7 @@ return {
 		'tpope/vim-dotenv',
 		'MunifTanjim/nui.nvim',
 		'nvimtools/none-ls.nvim',
+		'jwalton512/vim-blade'
 	},
 	cmd = { 'Sail', 'Artisan', 'Composer', 'Npm', 'Yarn', 'Laravel' },
 	keys = {
