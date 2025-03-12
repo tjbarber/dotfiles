@@ -15,12 +15,14 @@ rm -rf -- ~/.config/i3
 rm -rf -- ~/.config/gtk-3.0
 rm -rf -- ~/.config/ghostty
 rm -rf -- ~/.zshrc
+rm -rf -- ~/.fehbg
 rm -rf -- ~/.tmux.conf
 rm -rf -- ~/Pictures/wallpapers
 
 ln -s "$(pwd)/nvim" ~/.config/nvim
 ln -s "$(pwd)/ghostty" ~/.config/ghostty
 ln -s "$(pwd)/.zshrc" ~/.zshrc
+ln -s "$(pwd)/.fehbg" ~/.fehbg
 ln -s "$(pwd)/.tmux.conf" ~/.tmux.conf
 ln -s "$(pwd)/.ideavimrc" ~/.ideavimrc
 ln -s "$(pwd)/work" ~/work
