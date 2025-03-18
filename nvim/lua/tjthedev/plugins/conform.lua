@@ -5,8 +5,7 @@ return {
 	config = function()
 		local conform = require("conform")
 		conform.setup({
-			format_on_save = {
-				timeout_ms = 1000,
+			format_after_save = {
 				lsp_format = "fallback",
 			},
 			formatters_by_ft = {

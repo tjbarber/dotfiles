@@ -70,7 +70,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-vi-mode)
+# plugins=(git zsh-vi-mode)
+plugins=(git)
 ZVM_INSERT_MODE_CURSOR=$icur'\e\e]12;#47BAC0\a'
 ZVM_NORMAL_MODE_CURSOR=$ncur'\e\e]12;#E4609B\a'
 ZVM_VI_HIGHLIGHT_FOREGROUND=#535353
@@ -127,6 +128,8 @@ if [ -d "$HOME/.luarocks/bin" ]; then
   path+=("$HOME/.luarocks/bin")
 fi
 
+path+=("$HOME/.local/scripts")
+
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
@@ -158,5 +161,7 @@ alias wip="ga . && gc 'wip'"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 alias poweroff='sudo systemctl poweroff'
 alias reboot='sudo systemctl reboot'
+
+bindkey -s '^F' "tmux-sessionizer\n"
 
 source $HOME/Projects/dotfiles/secrets.sh

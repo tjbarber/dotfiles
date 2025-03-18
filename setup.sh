@@ -17,6 +17,7 @@ rm -rf -- ~/.config/ghostty
 rm -rf -- ~/.zshrc
 rm -rf -- ~/.fehbg
 rm -rf -- ~/.tmux.conf
+rm -rf -- ~/.local/scripts
 rm -rf -- ~/Pictures/wallpapers
 
 ln -s "$(pwd)/nvim" ~/.config/nvim
@@ -27,6 +28,7 @@ ln -s "$(pwd)/.tmux.conf" ~/.tmux.conf
 ln -s "$(pwd)/.ideavimrc" ~/.ideavimrc
 ln -s "$(pwd)/work" ~/work
 ln -s "$(pwd)/wallpapers" ~/Pictures/wallpapers
+ln -s "$(pwd)/scripts" ~/.local/scripts
 
 if [ $platform == "linux" ]; then
   ln -s "$(pwd)/i3" ~/.config/i3
