@@ -21,6 +21,6 @@ if tmux has-session -t=$selected_name 2> /dev/null; then
   exit 0
 fi
 
-tmux new-session -ds $selected_name -c $selected
+tmux new-session -ds $selected_name -c $selected_full_path
 tmux send-keys -t $selected_name "nvim ." ^M
 switch_to
