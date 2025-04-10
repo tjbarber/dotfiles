@@ -1,7 +1,7 @@
 -- Automatically format/lint files
 
 return {
-	'stevearc/conform.nvim',
+	"stevearc/conform.nvim",
 	config = function()
 		local conform = require("conform")
 		conform.setup({
@@ -14,8 +14,23 @@ return {
 				typescript = { "prettier" },
 				typescriptreact = { "prettier" },
 				lua = { "stylua" },
-				ruby = { "rubocop" }
+				ruby = { "rubocop" },
+			},
+			formatters = {
+				rubocop = {
+					args = {
+						"--server",
+						"-a",
+						"-f",
+						"quiet",
+						"--except",
+						"Lint/UselessAssignment,Style/EmptyMethod",
+						"--stderr",
+						"--stdin",
+						"$FILENAME",
+					},
+				},
 			},
 		})
-	end
+	end,
 }
