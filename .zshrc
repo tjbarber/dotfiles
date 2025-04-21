@@ -104,8 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-if [ -d "$HOME/.asdf" ]; then
-  . "$HOME/.asdf/asdf.sh"
+
+if [ -d "$HOME/.local/share/mise/shims" ]; then
+  path+=("$HOME/.local/share/mise/shims")
 fi
 
 if [ -d "$HOME/.cargo/bin" ]; then
