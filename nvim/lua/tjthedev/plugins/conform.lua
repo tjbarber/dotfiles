@@ -24,7 +24,7 @@ return {
 						"-f",
 						"quiet",
 						"--except",
-						"Lint/UselessAssignment,Style/EmptyMethod,Style/RedundantReturn",
+						"Lint/UselessAssignment,Lint/Void,Style/EmptyMethod,Style/RedundantReturn",
 						"--stderr",
 						"--stdin",
 						"$FILENAME",

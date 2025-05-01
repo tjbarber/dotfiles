@@ -1,20 +1,20 @@
 -- LSP fun stuff
 
 return {
-	'VonHeikemen/lsp-zero.nvim',
-	branch = 'v2.x',
+	"VonHeikemen/lsp-zero.nvim",
+	branch = "v2.x",
 	dependencies = {
 		-- LSP Support
-		{ 'neovim/nvim-lspconfig' },
-		{ 'williamboman/mason.nvim' },
-		{ 'williamboman/mason-lspconfig.nvim' },
-		{ 'hrsh7th/nvim-cmp' },
+		{ "neovim/nvim-lspconfig" },
+		{ "williamboman/mason.nvim" },
+		{ "williamboman/mason-lspconfig.nvim" },
+		{ "hrsh7th/nvim-cmp" },
 		{ "hrsh7th/cmp-buffer" },
 		{ "hrsh7th/cmp-path" },
 		{ "saadparwaiz1/cmp_luasnip" },
-		{ 'hrsh7th/cmp-nvim-lsp' },
-		{ 'hrsh7th/cmp-nvim-lua' },
-		{ 'L3MON4D3/LuaSnip' },
+		{ "hrsh7th/cmp-nvim-lsp" },
+		{ "hrsh7th/cmp-nvim-lua" },
+		{ "L3MON4D3/LuaSnip" },
 		{
 			"MattiasMTS/cmp-dbee",
 			ft = "sql",
@@ -22,7 +22,7 @@ return {
 		},
 	},
 	config = function()
-		local lsp = require('lsp-zero').preset({})
+		local lsp = require("lsp-zero").preset({})
 
 		lsp.on_attach(function(_, bufnr)
 			-- see :help lsp-zero-keybindings
@@ -31,10 +31,10 @@ return {
 		end)
 
 		-- (Optional) Configure lua language server for neovim
-		require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+		require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 
-		require('lspconfig').ruby_lsp.setup({
-			cmd = { os.getenv('HOME') .. '/.asdf/shims/ruby-lsp', 'stdio' },
+		require("lspconfig").ruby_lsp.setup({
+			cmd = { os.getenv("HOME") .. "/.local/share/mise/shims/ruby-lsp", "stdio" },
 		})
 
 		vim.api.nvim_create_autocmd("FileType", {
@@ -42,14 +42,14 @@ return {
 			callback = function()
 				vim.lsp.start({
 					name = "laravel-ls",
-					cmd = { '/home/tjbarber/go/bin/laravel-ls' },
+					cmd = { "/home/tjbarber/go/bin/laravel-ls" },
 					-- if you want to recompile everytime
 					-- the language server is started.
 					-- Uncomment this line instead
 					-- cmd = { '/path/to/laravel-ls/start.sh' },
 					root_dir = vim.fn.getcwd(),
 				})
-			end
+			end,
 		})
 
 		lsp.setup()
@@ -61,5 +61,5 @@ return {
 		-- 		{ "cmp-dbee" },
 		-- 	},
 		-- })
-	end
+	end,
 }

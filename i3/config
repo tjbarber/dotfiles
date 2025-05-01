@@ -207,7 +207,7 @@ bar {
 }
 
 exec --no-startup-id dunst
-exec --no-startup-id ~/.fehbg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/andre-benz-e4xOmzd8vzg-unsplash.jpg
 
 bindsym $mod+Shift+p exec --no-startup-id maim -s -u | xclip -selection clipboard -t image/png -i
 gaps inner 10
