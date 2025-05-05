@@ -3,7 +3,6 @@
 sudo pacman -S --needed --noconfirm \
   ghostty \
   rofi-wayland \
-  neovim \
   zsh \
   ripgrep \
   git \
@@ -32,12 +31,21 @@ sudo pacman -S --needed --noconfirm \
   wireplumber \
   ncspot \
   dunst \
+  curl \
+  cmake \
+  ninja
 
 # dont forget to install gcc-14 to help compile annoying gems
 # sudo pacman -S gcc14
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://install.ohmyz.sh)"
+fi
+
+if [ ! -d "$HOME/Projects/neovim" ]; then
+  git clone git@github.com:neovim/neovim.git
+  make CMAKE_BUILD_TYPE=RelWithDebInfo
+  sudo make install
 fi
 
 if [ ! -f "$HOME/.local/bin/mise" ]; then

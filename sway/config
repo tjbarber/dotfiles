@@ -20,7 +20,7 @@ font pango:JetBrains Mono Nerd Font 10
 
 ### Display configuration
 output * adaptive_sync on
-output * bg ~/Pictures/wallpapers/colorado/payson-wick-e5r7wPtSGG0-unsplash.jpg fill
+output * bg ~/Pictures/wallpapers/iceland/christoffer-engstrom-SIczJ91He3c-unsplash.jpg fill
 output "Acer Technologies Acer XB272 #ASM4zqQhZAfd" resolution 1920x1080@240Hz position 1080,480
 output "Acer Technologies KA272 E 84120E1083W01" resolution 1920x1080@100Hz transform 90 position 0,0
 focus output "Acer Technologies Acer XB272 #ASM4zqQhZAfd"
