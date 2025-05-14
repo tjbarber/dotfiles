@@ -1,0 +1,54 @@
+# black
+palette = 0=#212121
+
+# maroon
+palette = 1=#E4609B
+
+# green
+palette = 2=#ffffff
+
+# olive
+palette = 3=#949494
+
+# navy
+palette = 4=#949494
+
+# purple
+palette = 5=#E4609B
+
+# teal
+palette = 6=#949494
+
+# silver
+palette = 7=#949494
+
+# grey
+palette = 8=#949494
+
+# red
+palette = 9=#E4609B
+
+# lime
+palette = 10=#ffffff
+
+# yellow
+palette = 11=#949494
+
+# blue
+palette = 12=#949494
+
+# fuchsia
+palette = 13=#E4609B
+
+# aqua
+palette = 14=#949494
+
+# white
+palette = 15=#ffffff
+
+background = 18181A
+foreground = d5d5d5
+cursor-color = 47BAC0
+cursor-text = 47BAC0
+selection-background = ffffff
+selection-foreground = 000000
