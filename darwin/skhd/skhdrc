@@ -1,0 +1,5 @@
+cmd - return : /Applications/Ghostty.app/Contents/MacOS/ghostty --single-instance -d ~
+
+.blacklist [
+	"ghostty"
+]

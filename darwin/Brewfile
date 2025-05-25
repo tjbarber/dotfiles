@@ -1,0 +1,19 @@
+brew "fzf"
+brew "mise"
+brew "ncspot"
+brew "neovim"
+brew "postgresql@16", restart_service: true
+brew "koekeishiya/formulae/skhd"
+# brew services start skhd
+brew "openssl@3" 
+brew "readline" 
+brew "libyaml" 
+brew "tmux"
+brew "gmp" 
+brew "autoconf"
+cask "1Password"
+cask "firefox"
+cask "ghostty"
+cask "nikitabobko/tap/aerospace"
+cask "slack"
+mas "Xcode", id: 497799835

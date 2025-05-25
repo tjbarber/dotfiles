@@ -69,4 +69,6 @@ alias reboot='sudo systemctl reboot'
 bindkey -s '^F' "tmux-sessionizer\n"
 
 source $HOME/Projects/dotfiles/secrets.sh
-eval "$(/home/tjbarber/.local/bin/mise activate zsh)"
+
+MISE_LOCATION=$(which mise)
+eval "$($MISE_LOCATION activate zsh)"
