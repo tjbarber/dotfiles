@@ -60,4 +60,3 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '<dic
 
 # displays dont have separate workspaces
 defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
-
