@@ -34,6 +34,10 @@ if [ -d "$HOME/.luarocks/bin" ]; then
   path+=("$HOME/.luarocks/bin")
 fi
 
+if [ -d "/opt/homebrew/opt/postgresql@16/bin" ]; then
+  path+=("/opt/homebrew/opt/postgresql@16/bin")
+fi
+
 path+=("$HOME/.local/scripts")
 
 
