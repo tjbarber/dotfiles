@@ -33,7 +33,10 @@ sudo pacman -S --needed --noconfirm \
   dunst \
   curl \
   cmake \
-  ninja
+  ninja \
+  flatpak \
+  unzip \
+  evemu
 
 # dont forget to install gcc-14 to help compile annoying gems
 # sudo pacman -S gcc14
@@ -44,6 +47,10 @@ fi
 
 if [ ! -d "$HOME/Projects/neovim" ]; then
   git clone git@github.com:neovim/neovim.git
+fi
+
+if [ -d "$HOME/Projects/neovim" ]; then
+  git pull
   make CMAKE_BUILD_TYPE=RelWithDebInfo
   sudo make install
 fi
@@ -64,4 +71,6 @@ xdg-settings set default-web-browser firefox.desktop
 
 sudo systemctl enable valkey.service
 sudo systemctl start valkey.service
+
+flatpak install flathub md.obsidian.Obsidian
 
