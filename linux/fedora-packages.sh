@@ -16,9 +16,29 @@ sudo dnf install \
 	curl \
 	glibc-gconv-extra \
 	ghostty \
+	gnome-shell-extension-pop-shell \
+	xprop \
+	zsh \
+	fzf \
+	autoconf \
+	gcc \
+	rust \
+	patch \
+	make \
+	bzip2 \
+	openssl-devel \
+	libyaml-devel \
+	libffi-devel \
+	readline-devel \
+	gdbm-devel \
+	ncurses-devel \
+	perl-FindBin \
+	zlib-ng-compat-devel \
+	ncspot
 
 sudo dnf install akmod-nvidia
 
+sudo dnf install postgresql@16
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://install.ohmyz.sh)"
@@ -38,3 +58,5 @@ fi
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub md.obsidian.Obsidian
 flatpak install flathub com.slack.Slack
+
+cargo install --locked ncspot
