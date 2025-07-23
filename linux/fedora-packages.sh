@@ -6,7 +6,9 @@ sudo dnf copr enable scottames/ghostty
 
 sudo dnf install \
 	https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-	https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
+	https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+sudo dnf install \
 	flatpak \
 	ninja-build \
 	cmake \
@@ -16,7 +18,6 @@ sudo dnf install \
 	curl \
 	glibc-gconv-extra \
 	ghostty \
-	gnome-shell-extension-pop-shell \
 	xprop \
 	zsh \
 	fzf \
@@ -34,19 +35,21 @@ sudo dnf install \
 	ncurses-devel \
 	perl-FindBin \
 	zlib-ng-compat-devel \
-	ncspot
+	rust \
+	cargo \
+	zsh
 
 sudo dnf install akmod-nvidia
 
-sudo dnf install postgresql@16
+# sudo dnf install postgresql@16
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://install.ohmyz.sh)"
 fi
 
-if [ ! -d "$HOME/Projects/neovim" ]; then
-  git clone git@github.com:neovim/neovim.git
-fi
+# if [ ! -d "$HOME/Projects/neovim" ]; then
+#   git clone git@github.com:neovim/neovim.git
+# fi
 
 if [ ! -f "$HOME/.local/bin/mise" ]; then
   curl https://mise.run | sh
