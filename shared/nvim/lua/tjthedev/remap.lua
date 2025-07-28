@@ -23,3 +23,14 @@ vim.keymap.set("n", "<C-Space>", "<Cmd>terminal<CR>a")
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(event)
+    local bufmap = function(mode, rhs, lhs)
+      vim.keymap.set(mode, rhs, lhs, {buffer = event.buf})
+    end
+
+    bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+    bufmap('n', 'grd', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+  end,
+})
