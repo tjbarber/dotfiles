@@ -37,11 +37,17 @@ sudo dnf install \
 	zlib-ng-compat-devel \
 	rust \
 	cargo \
-	zsh
+	zsh \
+	libpq-devel \
+	ripgrep
 
 sudo dnf install akmod-nvidia
 
-# sudo dnf install postgresql@16
+# see https://docs.fedoraproject.org/en-US/quick-docs/postgresql/
+sudo dnf install postgresql16 \
+  postgresql16-server \
+  postgresql16-contrib \
+  valkey 
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://install.ohmyz.sh)"
@@ -63,3 +69,6 @@ flatpak install flathub md.obsidian.Obsidian
 flatpak install flathub com.slack.Slack
 
 cargo install --locked ncspot
+
+echo -n > "$HOME/.config/sway/config.d/90-bar.conf"
+

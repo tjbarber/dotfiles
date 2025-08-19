@@ -10,10 +10,10 @@ zstyle ':omz:update' mode auto
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-if [ -d "$HOME/.local/share/mise/shims" ]; then
-  path=("$HOME/.local/share/mise/shims" $path)
-fi
-
+# if [ -d "$HOME/.local/share/mise/shims" ]; then
+#   path=("$HOME/.local/share/mise/shims" $path)
+# fi
+#
 if [ -d "$HOME/.cargo/bin" ]; then
   path+=("$HOME/.cargo/bin")
 fi
@@ -76,3 +76,6 @@ source $HOME/Projects/dotfiles/secrets.sh
 
 MISE_LOCATION=$(which mise)
 eval "$($MISE_LOCATION activate zsh)"
+
+# opencode
+export PATH=/home/tjbarber/.opencode/bin:$PATH

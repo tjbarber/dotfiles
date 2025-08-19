@@ -13,6 +13,10 @@ tmux new-window -t rails-server
 tmux send-keys -t rails-server 'cd ~/Projects/ui/rails-server' C-m
 tmux send-keys -t rails-server './bin/node-renderer' C-m
 
+tmux new-window -t rails-server
+tmux send-keys -t rails-server 'cd ~/Projects/ui/rails-server' C-m
+tmux send-keys -t rails-server 'bundle exec sidekiq -C config/sidekiq/all.yml' C-m
+
 tmux select-window -t rails-server:1
 tmux attach -t rails-server
 

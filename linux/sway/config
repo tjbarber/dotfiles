@@ -20,10 +20,10 @@ font pango:JetBrains Mono Nerd Font 10
 
 ### Display configuration
 output * adaptive_sync on
-output * bg ~/Pictures/wallpapers/montana/steven-cordes-v8rgLNfpHyY-unsplash.jpg fill
+output * bg ~/Pictures/wallpapers/montana/hunter-james-FFT0f-Js51w-unsplash.jpg fill
 output "LG Electronics LG HDR 4K 110NTCZD8779" resolution 3840x2160@59.997hz scale 2
-output "Acer Technologies Acer XB272 #ASM4zqQhZAfd" resolution 1920x1080@240Hz transform 270 position 0,0
-output "Acer Technologies KA272 E 84120E1083W01" resolution 1920x1080@100Hz transform 90 position 0,0
+output "Acer Technologies Acer XB272 T9PAA0014200" resolution 1920x1080@240Hz transform 270 position 0,0
+output "Acer Technologies KA272 E 84120E1083W01" resolution 1920x1080@100Hz transform 270 position 0,0
 focus output "Acer Technologies Acer XB272 #ASM4zqQhZAfd"
 
 ### Idle configuration
@@ -183,89 +183,42 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-mode "passthrough" {
-    bindsym $mod+Pause mode default
-}
-bindsym $mod+Pause mode "passthrough"
-
-# apply mark for Xwayland and wayland native browser windows
-for_window [class="Chromium-browser"] mark Browser
-for_window [class="Brave-browser"] mark Browser
-for_window [class="firefox"]  mark Browser
-for_window [app_id="Chromium-browser"] mark Browser
-for_window [app_id="brave-browser"] mark Browser
-for_window [app_id="firefox"] mark Browser
-
-# inhibit scrensaver for fullscreen browser windows
-for_window [con_mark="Browser"] {
-    inhibit_idle fullscreen
-}
-
-# firefox wayland screensharing indicator
-for_window [app_id="firefox" title="Firefox — Sharing Indicator"] {
-    floating enable
-}
-
-# Display PulseAudio volume control application (both GTK and Qt varieties)
-# as a floating window.
-
-for_window [app_id="pavucontrol"] {
-    floating enable
-    move position center
-}
-
-for_window [app_id="pavucontrol-qt"] {
-    floating enable
-    move position center
-}
-
-for_window [app_id="lxqt-policykit-agent"] {
-    floating enable
-    move position center
-}
-
-set $brightness_notification_cmd  command -v notify-send >/dev/null && \
-        VALUE=$(light) && VALUE=${VALUE%%.*} && \
-        notify-send -e -h string:x-canonical-private-synchronous:brightness \
-            -h "int:value:$VALUE" -t 800 "Brightness: ${VALUE}%"
-
-bindsym XF86MonBrightnessDown exec \
-        'STEP="$brightness_step" && light -U ${STEP:-5} && $brightness_notification_cmd'
-bindsym XF86MonBrightnessUp exec \
-        'STEP="$brightness_step" && light -A ${STEP:-5} && $brightness_notification_cmd'
-
-# Allow Play and Stop bindings even if the screen is locked
-# Requires `playerctl`
-bindsym --locked {
-    XF86AudioPlay       exec playerctl play-pause
-    XF86AudioStop       exec playerctl stop
-}
-
-bindsym {
-    XF86AudioForward    exec playerctl position +10
-    XF86AudioNext       exec playerctl next
-    XF86AudioPause      exec playerctl pause
-    XF86AudioPrev       exec playerctl previous
-    XF86AudioRewind     exec playerctl position -10
-}
-
-bindsym {
-    # Capture the currently active output
-    Print       exec grimshot save output
-    # Capture the currently active window
-    Alt+Print   exec grimshot save active
-    # Select and capture a custom rectangular area
-    Ctrl+Print  exec grimshot save area
-    # Select and capture a custom rectangular area and copy to clipboard
-    $mod+Shift+p exec slurp | grim -g - - | wl-copy
-}
-
 gaps inner 10
 gaps outer 10
+
+# We want notifications
+exec --no-startup-id dunst
+
+# Include configs from 3 locations:
+#  - /usr/share/sway/config.d
+#  - /etc/sway/config.d
+#  - $XDG_CONFIG_HOME/sway/config.d ($HOME/.config/sway/config.d)
+#
+# If multiple directories contain the files with the same name, the later
+# directory takes precedence; `$XDG_CONFIG_HOME/sway/config.d/20-swayidle.conf`
+# will always be loaded instead of `/usr/share/sway/config.d/20-swayidle.conf`
+# or `/etc/sway/config.d/20-swayidle.conf`
+#
+# This mechanism permits overriding our default configuration per-system
+# (/etc) or per-user ($XDG_CONFIG_HOME) basis. Just create the file you
+# want to modify/override in the higher-level directory.
+#
+# For example, to disable the default bar from Fedora configs, you'll need to
+#     $ echo -n > "$HOME/.config/sway/config.d/90-bar.conf"
+#
+# Note the quoting, the $() and the arguments quoting. All the parts are equally
+# important to make the magic work. And if you want to learn the secret behind
+# the trick, it's all in the `wordexp(3)`.
+#
+include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 
 for_window [class=".*"] border pixel 0
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
+
+bindsym {
+    $mod+Shift+p exec slurp | grim -g - - | wl-copy
+}
 
 bar {
     position bottom
@@ -280,10 +233,3 @@ bar {
         inactive_workspace #323232 #323232 #5c5c5c
     }
 }
-
-# We want notifications
-exec --no-startup-id dunst
-
-# Arch Linux stuff
-include /etc/sway/config.d/*
-exec /usr/bin/xdg-user-dirs-update
