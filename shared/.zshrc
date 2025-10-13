@@ -38,8 +38,23 @@ if [ -d "/opt/homebrew/opt/postgresql@16/bin" ]; then
   path+=("/opt/homebrew/opt/postgresql@16/bin")
 fi
 
-path+=("$HOME/.local/scripts")
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+  if [ -d "/home/linuxbrew/.linuxbrew/opt/postgresql@17" ]; then
+    path+=("/home/linuxbrew/.linuxbrew/opt/postgresql@17/bin")
+  fi
+
+  if [ -d "/home/linuxbrew/.linuxbrew/opt/libpq" ]; then
+    path+=("/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH")
+  fi
+fi
+
+if [ -d "/home/tjbarber/.opencode" ]; then
+  path+=("/home/tjbarber/.opencode/bin")
+fi
+
+path+=("$HOME/.local/scripts")
 
 if [ $(uname) = "Linux" ] && [ $XDG_SESSION_TYPE != 'wayland' ]; then
   setxkbmap -option "ctrl:nocaps"
@@ -53,7 +68,6 @@ if [ $(uname) = "Linux" ] && [ $XDG_SESSION_TYPE != 'wayland' ]; then
 fi
 
 if [ $(uname) = "Darwin" ]; then
-  export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
   export LC_ALL=en_US.UTF-8
   export LANG=en_US.UTF-8
 fi
@@ -76,6 +90,3 @@ source $HOME/Projects/dotfiles/secrets.sh
 
 MISE_LOCATION=$(which mise)
 eval "$($MISE_LOCATION activate zsh)"
-
-# opencode
-export PATH=/home/tjbarber/.opencode/bin:$PATH
