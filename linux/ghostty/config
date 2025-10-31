@@ -13,4 +13,5 @@ confirm-close-surface=false
 
 keybind = super+shift+f=toggle_fullscreen
 keybind = super+shift+y=decrease_font_size:1
+keybind = super+shift+i=increase_font_size:1
 keybind = super+shift+u=reset_font_size
