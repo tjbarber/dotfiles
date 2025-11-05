@@ -10,10 +10,6 @@ zstyle ':omz:update' mode auto
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-# if [ -d "$HOME/.local/share/mise/shims" ]; then
-#   path=("$HOME/.local/share/mise/shims" $path)
-# fi
-#
 if [ -d "$HOME/.cargo/bin" ]; then
   path+=("$HOME/.cargo/bin")
 fi
