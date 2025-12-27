@@ -1,4 +1,4 @@
-tmux new-session -s rails-server -d
+tmux new-session -s rails-server -d -c ~/Projects/ui/rails-server
 tmux send-keys -t rails-server 'cd ~/Projects/ui/rails-server' C-m
 tmux send-keys -t rails-server 'nvim' C-m
 

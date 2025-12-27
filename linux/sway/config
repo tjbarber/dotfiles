@@ -21,7 +21,8 @@ font pango:JetBrains Mono Nerd Font 10
 ### Display configuration
 output * adaptive_sync on
 # output * bg ~/Pictures/wallpapers/idaho/perry-kibler-IaQMarBPo_I-unsplash.jpg fill
-output * bg ~/Pictures/wallpapers/montana/roberto-nickson-MPfv17UJb8w-unsplash.jpg fill
+# output * bg ~/Pictures/wallpapers/montana/roberto-nickson-MPfv17UJb8w-unsplash.jpg fill
+output * bg ~/Pictures/wallpapers/holiday/chad-madden-SUTfFCAHV_A-unsplash.jpg fill
 output "LG Electronics LG HDR 4K 110NTCZD8779" resolution 3840x2160@59.997hz scale 2
 output "Acer Technologies Acer XB272 T9PAA0014200" resolution 1920x1080@240Hz transform 270 position 0,0
 output "Acer Technologies KA272 E 84120E1083W01" resolution 1920x1080@100Hz transform 270 position 0,0
@@ -131,9 +132,9 @@ bindsym $mod+b splith
 bindsym $mod+v splitv
 
 # Switch the current container between different layout styles
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
@@ -145,7 +146,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # Move focus to the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # Scratchpad:
 
@@ -216,6 +217,9 @@ include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "
 for_window [class=".*"] border pixel 0
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
+
+for_window [app_id="crew"] floating enable
+for_window [app_id="crew"] move position center
 
 bindsym {
     $mod+Shift+p exec slurp | grim -g - - | wl-copy
