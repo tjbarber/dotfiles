@@ -191,6 +191,9 @@ gaps outer 10
 # We want notifications
 exec --no-startup-id dunst
 
+# night shift
+exec_always gammastep
+
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
 #  - /etc/sway/config.d
