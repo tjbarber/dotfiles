@@ -63,11 +63,6 @@ if [ $(uname) = "Linux" ] && [ $XDG_SESSION_TYPE != 'wayland' ]; then
   fi
 fi
 
-if [ $(uname) = "Darwin" ]; then
-  export LC_ALL=en_US.UTF-8
-  export LANG=en_US.UTF-8
-fi
-
 alias gs="git status"
 alias gp="git push"
 alias gl="git log"
@@ -84,5 +79,6 @@ bindkey -s '^F' "tmux-sessionizer\n"
 
 source $HOME/Projects/dotfiles/secrets.sh
 
-MISE_LOCATION=$(which mise)
-eval "$($MISE_LOCATION activate zsh)"
+if MISE_LOCATION=$(which mise 2>/dev/null); then
+	eval "$($MISE_LOCATION activate zsh)"
+fi

@@ -22,7 +22,8 @@ font pango:JetBrains Mono Nerd Font 10
 output * adaptive_sync on
 # output * bg ~/Pictures/wallpapers/idaho/perry-kibler-IaQMarBPo_I-unsplash.jpg fill
 # output * bg ~/Pictures/wallpapers/montana/roberto-nickson-MPfv17UJb8w-unsplash.jpg fill
-output * bg ~/Pictures/wallpapers/holiday/chad-madden-SUTfFCAHV_A-unsplash.jpg fill
+# output * bg ~/Pictures/wallpapers/holiday/chad-madden-SUTfFCAHV_A-unsplash.jpg fill
+output * bg ~/Pictures/wallpapers/halo/6i4df7rrun521.png fill
 output "LG Electronics LG HDR 4K 110NTCZD8779" resolution 3840x2160@59.997hz scale 2
 output "Acer Technologies Acer XB272 T9PAA0014200" resolution 1920x1080@240Hz transform 270 position 0,0
 output "Acer Technologies KA272 E 84120E1083W01" resolution 1920x1080@100Hz transform 270 position 0,0

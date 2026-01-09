@@ -1,3 +1,5 @@
+#!/bin/bash
+
 tmux new-session -s rails-server -d -c ~/Projects/ui/rails-server
 tmux send-keys -t rails-server 'cd ~/Projects/ui/rails-server' C-m
 tmux send-keys -t rails-server 'nvim' C-m
@@ -16,6 +18,23 @@ tmux send-keys -t rails-server './bin/node-renderer' C-m
 tmux new-window -t rails-server
 tmux send-keys -t rails-server 'cd ~/Projects/ui/rails-server' C-m
 tmux send-keys -t rails-server 'bundle exec sidekiq -C config/sidekiq/all.yml' C-m
+
+
+if [ -f /run/host/run/ostree-booted ]; then
+	tmux new-window -t rails-server
+
+    if ! pgrep -x postgres >/dev/null 2>&1; then
+		tmux send-keys -t rails-server 'pg_ctl -D $(brew --prefix)/var/postgresql@17 start' C-m
+    fi
+    
+    if ! pgrep -x valkey-server >/dev/null 2>&1; then
+		tmux send-keys -t rails-server 'valkey-server --daemonize yes' C-m
+    fi
+    
+    if ! pgrep -f "org.elasticsearch.bootstrap.Elasticsearch" >/dev/null 2>&1; then
+		tmux send-keys -t rails-server '~/Applications/elasticsearch-9.2.0/bin/elasticsearch -d' C-m
+    fi
+fi
 
 tmux select-window -t rails-server:1
 tmux attach -t rails-server

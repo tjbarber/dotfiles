@@ -1,0 +1,8 @@
+brew "mise"
+brew "ruby-build"
+# brew services start postgresql@17
+brew "postgresql@17"
+brew "libpq"
+brew "pgvector"
+# brew services start valkey
+brew "valkey"

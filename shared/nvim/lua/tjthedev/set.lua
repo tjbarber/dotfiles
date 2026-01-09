@@ -47,3 +47,18 @@ vim.opt.confirm = true
 vim.opt.undofile = true
 vim.opt.backup = true
 vim.opt.backupdir:remove('.')
+
+if vim.loop.os_uname().sysname == "Linux" and vim.fn.filereadable("/run/.toolboxenv") == 1 then
+  vim.g.clipboard = {
+    name = "wl-clipboard (host)",
+    copy = {
+      ["+"] = { "flatpak-spawn", "--host", "wl-copy", "--type", "text/plain" },
+      ["*"] = { "flatpak-spawn", "--host", "wl-copy", "--type", "text/plain" },
+    },
+    paste = {
+      ["+"] = { "flatpak-spawn", "--host", "wl-paste", "--no-newline" },
+      ["*"] = { "flatpak-spawn", "--host", "wl-paste", "--no-newline" },
+    },
+	cache_enabled = 1,
+  }
+end
