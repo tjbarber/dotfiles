@@ -20,20 +20,20 @@ vim.keymap.set("n", "<leader>e", function()
 end)
 
 vim.keymap.set("n", "<C-Space>", function()
-  -- Search for an existing terminal buffer
-  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-    if vim.api.nvim_buf_is_loaded(buf) then
-      local buftype = vim.api.nvim_buf_get_option(buf, "buftype")
-      if buftype == "terminal" then
-        vim.api.nvim_set_current_buf(buf)
-        return
-      end
-    end
-  end
+	-- Search for an existing terminal buffer
+	for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+		if vim.api.nvim_buf_is_loaded(buf) then
+			local buftype = vim.api.nvim_buf_get_option(buf, "buftype")
+			if buftype == "terminal" then
+				vim.api.nvim_set_current_buf(buf)
+				return
+			end
+		end
+	end
 
-  -- If no terminal buffer exists, open one
-  vim.cmd("terminal")
-  vim.cmd("startinsert")
+	-- If no terminal buffer exists, open one
+	vim.cmd("terminal")
+	vim.cmd("startinsert")
 end)
 vim.keymap.set("n", "<leader>nt", "<Cmd>terminal<CR>a")
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
@@ -41,19 +41,19 @@ vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(event)
-    local bufmap = function(mode, rhs, lhs)
-      vim.keymap.set(mode, rhs, lhs, {buffer = event.buf})
-    end
+	callback = function(event)
+		local bufmap = function(mode, rhs, lhs)
+			vim.keymap.set(mode, rhs, lhs, {buffer = event.buf})
+		end
 
-    bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
-    bufmap('n', 'grd', '<cmd>lua vim.lsp.buf.declaration()<cr>')
-  end,
+		bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+		bufmap('n', 'grd', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+	end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "ruby",
-  callback = function()
-    vim.keymap.set("n", "<leader>db", "Obinding.break<Esc>", { buffer = true, desc = "Insert binding.break" })
-  end,
+	pattern = "ruby",
+	callback = function()
+		vim.keymap.set("n", "<leader>db", "Obinding.break<Esc>", { buffer = true, desc = "Insert binding.break" })
+	end,
 })
