@@ -3,18 +3,38 @@ return {
 	build = ':TSUpdate',
 	branch = 'main',
 	config = function()
+		-- Register crystal parser from external repo (not yet upstream)
+		vim.api.nvim_create_autocmd("User", {
+			pattern = 'TSUpdate',
+			callback = function()
+				require('nvim-treesitter.parsers').crystal = {
+					install_info = {
+						url = 'https://github.com/crystal-lang-tools/tree-sitter-crystal',
+						generate = false,
+						generate_from_json = false,
+						queries = 'queries/nvim'
+					},
+				}
+			end,
+		})
+
+		vim.treesitter.language.register("crystal", { "cr" })
+
 		require('nvim-treesitter').setup({
 			ensure_installed = {
 				'c',
+				'crystal',
 				'go',
 				'html',
 				'javascript',
 				'json',
 				'lua',
+				'odin',
 				'php',
 				'php_only',
 				'query',
 				'ruby',
+				'tsx',
 				'typescript',
 				'vim',
 				'vimdoc',

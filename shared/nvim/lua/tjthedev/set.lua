@@ -44,6 +44,13 @@ vim.opt.clipboard = 'unnamedplus' -- use system clipboard
 
 vim.opt.confirm = true
 
+-- Equalize splits when terminal is resized (e.g., font size changes in Ghostty)
+vim.api.nvim_create_autocmd("VimResized", {
+    callback = function()
+        vim.cmd("wincmd =")
+    end,
+})
+
 vim.opt.undofile = true
 vim.opt.backup = true
 vim.opt.backupdir:remove('.')
