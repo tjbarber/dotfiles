@@ -74,6 +74,7 @@ alias wip="ga . && gc 'wip'"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 alias poweroff='sudo systemctl poweroff'
 alias reboot='sudo systemctl reboot'
+alias sl='ls'
 
 bindkey -s '^F' "tmux-sessionizer\n"
 
