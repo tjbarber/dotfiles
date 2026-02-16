@@ -1,29 +1,37 @@
-brew "autoconf"
-brew "cmake"
-brew "curl"
-brew "fzf"
-brew "gettext"
-brew "gmp" 
-brew "koekeishiya/formulae/skhd"
-brew "libpq"
-brew "libyaml" 
-brew "mise"
-brew "ncspot"
-brew "ninja"
-brew "openssl@3" 
-brew "postgresql@16", restart_service: true
-brew "readline" 
-brew "redis"
-brew "ripgrep"
-brew "tmux"
-cask "1Password"
-cask "brave-browser"
-cask "discord"
-cask "firefox"
-cask "ghostty"
-cask "nikitabobko/tap/aerospace"
-cask "obsidian"
-cask "slack"
-cask "utm"
-cask "zed"
-mas "Xcode", id: 497799835
+brew 'autoconf'
+brew 'cmake'
+brew 'coreutils'
+brew 'curl'
+brew 'fastlane'
+brew 'fzf'
+brew 'gettext'
+brew 'gmp'
+brew 'jq'
+brew 'libpq'
+brew 'libyaml'
+brew 'mise'
+brew 'ncspot'
+brew 'ninja'
+brew 'opencode'
+brew 'openssl@3'
+brew 'pgvector'
+brew 'pipx'
+brew 'postgresql@17', restart_service: true
+brew 'readline'
+brew 'rg'
+brew 'ripgrep'
+brew 'tmux'
+brew 'valkey', restart_service: true
+brew 'xcbeautify'
+brew 'xcode-build-server'
+brew 'xcp'
+cask '1Password'
+cask 'brave-browser'
+cask 'discord'
+cask 'firefox'
+cask 'ghostty'
+cask 'obsidian'
+cask 'postico'
+cask 'slack'
+cask 'spotify'
+mas 'Xcode', id: 497_799_835

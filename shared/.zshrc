@@ -30,8 +30,12 @@ if [ -d "$HOME/.luarocks/bin" ]; then
   path+=("$HOME/.luarocks/bin")
 fi
 
-if [ -d "/opt/homebrew/opt/postgresql@16/bin" ]; then
-  path+=("/opt/homebrew/opt/postgresql@16/bin")
+if [ -d "/opt/homebrew/opt/postgresql@17/bin" ]; then
+  path+=("/opt/homebrew/opt/postgresql@17/bin")
+fi
+
+if [ -d "/opt/homebrew/opt/libpq/bin" ]; then
+  path+=("/opt/homebrew/opt/libpq/bin")
 fi
 
 if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
