@@ -15,6 +15,7 @@ return {
 				typescriptreact = { "prettier" },
 				lua = { "stylua" },
 				ruby = { "rubocop" },
+				swift = { "swiftformat" },
 			},
 			formatters = {
 				rubocop = {

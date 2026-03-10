@@ -34,6 +34,7 @@ return {
 				'php_only',
 				'query',
 				'ruby',
+				'swift',
 				'tsx',
 				'typescript',
 				'vim',
