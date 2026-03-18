@@ -87,3 +87,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     outer.bottom =     10
     outer.top =        10
     outer.right =      10
+
+[workspace-to-monitor-force-assignment]
+	9 = 'secondary'
+	10 = 'secondary'
