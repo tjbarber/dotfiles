@@ -15,5 +15,16 @@ return {
 			root_markers = { "Package.swift", ".git", "compile_commands.json", "buildServer.json" },
 		})
 		vim.lsp.enable("sourcekit")
+
+		-- Ruby LSP
+		vim.lsp.config("ruby_lsp", {
+			cmd = { "ruby-lsp" },
+			filetypes = { "ruby", "eruby" },
+			root_markers = { "Gemfile", ".git" },
+			init_options = {
+				formatter = "auto",
+			},
+		})
+		vim.lsp.enable("ruby_lsp")
 	end,
 }

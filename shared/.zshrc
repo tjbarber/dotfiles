@@ -2,6 +2,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export GPG_TTY=$(tty)
 
 ZSH_THEME="robbyrussell"
 
@@ -36,18 +37,6 @@ fi
 
 if [ -d "/opt/homebrew/opt/libpq/bin" ]; then
   path+=("/opt/homebrew/opt/libpq/bin")
-fi
-
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-  if [ -d "/home/linuxbrew/.linuxbrew/opt/postgresql@17" ]; then
-    path+=("/home/linuxbrew/.linuxbrew/opt/postgresql@17/bin")
-  fi
-
-  if [ -d "/home/linuxbrew/.linuxbrew/opt/libpq" ]; then
-    path+=("/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH")
-  fi
 fi
 
 if [ -d "/home/tjbarber/.opencode" ]; then

@@ -3,6 +3,10 @@ return {
 	build = ':TSUpdate',
 	branch = 'main',
 	config = function()
+		-- Add runtime subdirectory to runtimepath so queries are found
+		-- (main branch stores queries in runtime/queries/ instead of queries/)
+		local ts_path = vim.fn.stdpath('data') .. '/lazy/nvim-treesitter'
+		vim.opt.runtimepath:append(ts_path .. '/runtime')
 		-- Register crystal parser from external repo (not yet upstream)
 		vim.api.nvim_create_autocmd("User", {
 			pattern = 'TSUpdate',
