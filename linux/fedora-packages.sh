@@ -43,32 +43,16 @@ sudo dnf install \
 
 sudo dnf install akmod-nvidia
 
-# see https://docs.fedoraproject.org/en-US/quick-docs/postgresql/
-sudo dnf install postgresql16 \
-  postgresql16-server \
-  postgresql16-contrib \
-  valkey 
-
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://install.ohmyz.sh)"
 fi
-
-# if [ ! -d "$HOME/Projects/neovim" ]; then
-#   git clone git@github.com:neovim/neovim.git
-# fi
 
 if [ ! -f "$HOME/.local/bin/mise" ]; then
   curl https://mise.run | sh
 fi
 
-# sudo systemctl enable valkey.service
-# sudo systemctl start valkey.service
-
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub md.obsidian.Obsidian
-flatpak install flathub com.slack.Slack
 
 cargo install --locked ncspot
-
-echo -n > "$HOME/.config/sway/config.d/90-bar.conf"
 
