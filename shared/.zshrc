@@ -74,12 +74,3 @@ export PATH=/home/tjbarber/.opencode/bin:$PATH
 # Added by flyctl installer
 export FLYCTL_INSTALL="/home/tjbarber/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
-export PATH="/home/tjbarber/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/home/tjbarber/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
-
-# Lerd
-export PATH="/home/tjbarber/.local/share/lerd/bin:$PATH"
-
-# Lerd completions
-fpath=(/home/tjbarber/.local/share/zsh/site-functions $fpath)
-autoload -Uz compinit && compinit

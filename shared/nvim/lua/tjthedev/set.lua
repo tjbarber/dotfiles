@@ -1,16 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local lerd_bin = vim.fn.expand("~/.local/share/lerd/bin")
-if vim.fn.isdirectory(lerd_bin) == 1 then
-	vim.env.PATH = lerd_bin .. ":" .. vim.env.PATH
-end
-
-vim.filetype.add({
-	pattern = {
-		[".*%.blade%.php"] = "blade",
-	},
-})
 vim.opt.backup = true
 vim.opt.backupdir:remove('.')
 vim.opt.clipboard = 'unnamedplus'
