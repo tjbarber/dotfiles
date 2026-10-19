@@ -5,3 +5,4 @@ linux/gtk-3.0/bookmarks
 databases.json
 secrets.sh
 tmp/
+/result

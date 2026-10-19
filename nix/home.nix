@@ -1,13 +1,16 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./tmux.nix
+  ];
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "tjbarber";
   home.homeDirectory = "/home/tjbarber";
 
   home.packages = [
-    pkgs.neovim
 	pkgs.fzf
 	pkgs.ripgrep
   ];
