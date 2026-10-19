@@ -4,6 +4,7 @@
   imports = [
     ./zsh.nix
     ./tmux.nix
+    ./mise.nix
   ];
 
   # Home Manager needs a bit of information about you and the
