@@ -1,7 +1,5 @@
 return {
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
-	"neovim/nvim-lspconfig",
+	"mason-org/mason.nvim",
 	opts = {
 		PATH = "append",
 	},
