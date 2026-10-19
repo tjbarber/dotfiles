@@ -15,7 +15,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun
 font pango:JetBrains Mono Nerd Font 10
 
 output * adaptive_sync on
-output * bg ~/Pictures/wallpapers/colorado/kameron-kincade-7wZ94rjLfkQ-unsplash.jpg fill
+output * bg ~/Pictures/wallpapers/autumn/hannu-keski-hakuni-vgxIfXwsUAE-unsplash.jpg fill
 
 # Acer Predator
 # output "Acer Technologies Acer XB272 T9PAA0014200" resolution 1920x1080@240Hz transform 270 position 0,0
