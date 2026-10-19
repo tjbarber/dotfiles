@@ -32,10 +32,6 @@ return {
 						}
 					end,
 				},
-				pint = {
-					command = "lerd",
-					args = { "pint", "$FILENAME" },
-				},
 				rubocop = {
 					args = {
 						"--server",
