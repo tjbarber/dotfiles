@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./zsh.nix
     ./tmux.nix
   ];
 
@@ -13,7 +14,9 @@
   home.packages = [
 	pkgs.fzf
 	pkgs.ripgrep
+	pkgs.neovim
   ];
+
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
@@ -26,14 +29,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  programs.neovim = {
-	  enable = true;
-  };
-
-  services.gpg-agent = {
-	  enable = true;
-	  defaultCacheTtl = 1800;
-	  enableSshSupport = true;
-  };
 }
