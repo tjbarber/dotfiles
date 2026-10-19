@@ -1,11 +1,5 @@
 return {
 	"mason-org/mason-lspconfig.nvim",
-	opts = {
-		ensure_installed = { "intelephense" },
-		automatic_enable = {
-			exclude = { "phpactor" },
-		},
-	},
 	dependencies = {
 		{ "mason-org/mason.nvim", opts = { PATH = "append" } },
 		"neovim/nvim-lspconfig",
