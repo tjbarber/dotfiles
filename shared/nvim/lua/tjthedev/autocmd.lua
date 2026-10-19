@@ -16,6 +16,16 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "c",
+	callback = function(event)
+		vim.bo[event.buf].expandtab = false
+		vim.bo[event.buf].shiftwidth = 4
+		vim.bo[event.buf].softtabstop = 4
+		vim.bo[event.buf].tabstop = 4
+	end,
+})
+
 vim.api.nvim_create_autocmd("VimResized", {
     callback = function()
         vim.cmd("wincmd =")

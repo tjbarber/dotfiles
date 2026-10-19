@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
 vim.opt.backup = true
 vim.opt.backupdir:remove('.')
 vim.opt.clipboard = 'unnamedplus'

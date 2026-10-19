@@ -30,26 +30,6 @@ if [ -d "$HOME/.luarocks/bin" ]; then
   path+=("$HOME/.luarocks/bin")
 fi
 
-if [ -d "/opt/homebrew/opt/postgresql@17/bin" ]; then
-  path+=("/opt/homebrew/opt/postgresql@17/bin")
-fi
-
-if [ -d "/opt/homebrew/opt/libpq/bin" ]; then
-  path+=("/opt/homebrew/opt/libpq/bin")
-fi
-
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-  if [ -d "/home/linuxbrew/.linuxbrew/opt/postgresql@17" ]; then
-    path+=("/home/linuxbrew/.linuxbrew/opt/postgresql@17/bin")
-  fi
-
-  if [ -d "/home/linuxbrew/.linuxbrew/opt/libpq" ]; then
-    path+=("/home/linuxbrew/.linuxbrew/opt/libpq/bin:$PATH")
-  fi
-fi
-
 if [ -d "/home/tjbarber/.opencode" ]; then
   path+=("/home/tjbarber/.opencode/bin")
 fi
@@ -87,3 +67,10 @@ source $HOME/Projects/dotfiles/secrets.sh
 if MISE_LOCATION=$(which mise 2>/dev/null); then
 	eval "$($MISE_LOCATION activate zsh)"
 fi
+
+# opencode
+export PATH=/home/tjbarber/.opencode/bin:$PATH
+
+# Added by flyctl installer
+export FLYCTL_INSTALL="/home/tjbarber/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
