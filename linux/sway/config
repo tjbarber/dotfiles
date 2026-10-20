@@ -139,9 +139,6 @@ bindsym $mod+r mode "resize"
 gaps inner 10
 gaps outer 10
 
-# We want notifications
-exec --no-startup-id dunst
-
 # night shift
 exec_always gammastep
 
