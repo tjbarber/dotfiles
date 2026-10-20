@@ -8,19 +8,12 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-	mise.url = "github:jdx/mise/v2026.10.15";
   };
 
-  outputs = { nixpkgs, home-manager, mise, ... }: {
+  outputs = { nixpkgs, home-manager, ... }: {
     homeConfigurations.tjbarber =
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-		extraSpecialArgs = {
-          misePackage = mise.packages.x86_64-linux.default;
-        };
-
         modules = [ ./nix/home.nix ];
       };
   };

@@ -5,6 +5,7 @@
     ./zsh.nix
     ./tmux.nix
     ./mise.nix
+	./fonts.nix
   ];
 
   # Home Manager needs a bit of information about you and the
