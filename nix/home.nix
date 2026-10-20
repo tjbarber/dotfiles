@@ -16,6 +16,7 @@
 	pkgs.fzf
 	pkgs.ripgrep
 	pkgs.neovim
+	pkgs.flyctl
   ];
 
   # This value determines the Home Manager release that your
